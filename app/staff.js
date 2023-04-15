@@ -18,7 +18,7 @@ window.onload = async () => {
     try {
         const getCurrentUser = await axios.get(`${baseUrl}/auth/me`, axiosConfig);
         const currentUser = getCurrentUser.data;
-        const getUserslist = await axios.get(`${baseUrl}/get-customers`, axiosConfig);
+        const getUserslist = await axios.get(`${baseUrl}/customers`, axiosConfig);
         const response = getUserslist.data.data.data;
         console.log(currentUser);
 
@@ -58,7 +58,7 @@ window.onload = async () => {
 
     window.handleDelete = async(id) => {
         try {
-            const deletingStaff = await axios.delete(`${baseUrl}/delete-customers/${id}`, axiosConfig);
+            const deletingStaff = await axios.delete(`${baseUrl}/customers/${id}`, axiosConfig);
             const response = deletingStaff.data;
             console.log(response)
             if(response.code == 200){
@@ -104,7 +104,7 @@ addStaffBtn.addEventListener("click", async (e) => {
     }
     if(name !== "" && email !== ""){
         try {
-            const creatingStaff = await axios.post(`${baseUrl}/add-customers`, data, axiosConfig);
+            const creatingStaff = await axios.post(`${baseUrl}/customers`, data, axiosConfig);
             const response = creatingStaff.data;
             console.log(response)
             if(response.code == 200){
