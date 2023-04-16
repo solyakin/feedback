@@ -23,9 +23,10 @@ registerBtn.addEventListener("click", async(e) => {
         try {
             const registering = await axios.post(`${baseUrl}/auth/register`, formData);
             const response = registering.data;
-            if(response.code === 200){
+            console.log(response)
+            if(response.code == 200){
                 setTimeout(() => {
-                    location.href = '/login.html';
+                    location.href = '/index.html';
                 },2000)
             }
         } catch (error) {

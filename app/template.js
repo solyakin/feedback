@@ -123,7 +123,7 @@ window.onload = async () => {
                                 <div style="margin-top : 8px">
                                     <fieldset class="mt-4">
                                         <legend class="sr-only">Notification method</legend>
-                                        <div class="">
+                                        <div class="space-y-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-10">
                                             ${parseArr?.map(({key, value}) => {
                                                 return `
                                                 <div class="flex items-center">
