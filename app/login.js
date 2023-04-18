@@ -24,7 +24,6 @@ loginBtn.addEventListener("click", async (e) => {
         }
     } catch (error) {
         const responseMsg= error.response.data;
-        console.log(responseMsg)
         if(responseMsg){
             Toastify({
                 text: "Invalid credentials",

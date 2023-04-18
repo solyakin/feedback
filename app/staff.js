@@ -20,7 +20,6 @@ window.onload = async () => {
         const currentUser = getCurrentUser.data;
         const getUserslist = await axios.get(`${baseUrl}/customers`, axiosConfig);
         const response = getUserslist.data.data.data;
-        console.log(currentUser);
 
         username.innerHTML = `Howdy, ${currentUser?.name}`
         company.innerHTML = currentUser?.company_name;
